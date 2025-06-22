@@ -1,0 +1,18 @@
+nama: callbrimo.yml
+run-name: ${{ github.actor }} sedang menguji GitHub Actions 🚀
+aktif: [tekan]
+Pekerjaan:
+  Jelajahi-Tindakan-GitHub:
+    berjalan pada: ubuntu-terbaru
+    tangga:
+      - jalankan: echo "🎉 Pekerjaan dipicu secara otomatis oleh peristiwa ${{ github.event_name }}."
+      - run: echo "🐧 Pekerjaan ini sekarang berjalan pada server ${{ runner.os }} yang dihosting oleh GitHub!"
+      - jalankan: echo "🔎 Nama cabang Anda adalah ${{ github.ref }} dan repositori Anda adalah ${{ github.repository }}."
+      - nama: Periksa kode repositori
+        penggunaan: tindakan/checkout@v4
+      - jalankan: echo "💡 Repositori ${{ github.repository }} telah dikloning ke pelari."
+      - run: echo "🖥️ Alur kerja sekarang siap untuk menguji kode Anda di runner."
+      - nama: Daftar file dalam repositori
+        jalankan: |
+          ls ${{ github.ruang kerja }}
+      - jalankan: echo "🍏 Status pekerjaan ini adalah ${{ job.status }}."
